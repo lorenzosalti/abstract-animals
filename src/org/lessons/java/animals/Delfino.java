@@ -1,6 +1,8 @@
 package org.lessons.java.animals;
 
-public class Delfino extends AbstractAnimal {
+import org.lessons.java.animals.interfaces.INuotante;
+
+public class Delfino extends AbstractAnimal implements INuotante {
 
   // CONSTRUCTOR
   public Delfino(String sound, String food) {
@@ -16,5 +18,10 @@ public class Delfino extends AbstractAnimal {
   @Override
   public void mangia() {
     System.out.println(getFood());
+  }
+
+  @Override
+  public void nuota() {
+    System.out.println("Sto nuotando!!!");
   }
 }
