@@ -1,7 +1,19 @@
 package org.lessons.java.animals;
 
+import org.lessons.java.animals.interfaces.INuotante;
+import org.lessons.java.animals.interfaces.IVolante;
+
 public class Main {
-  public static void main(String[] args) {
+
+  public void faiVolare(IVolante animale) {
+    animale.vola();
+  }
+
+  public void faiNuotare(INuotante animale) {
+    animale.nuota();
+  }
+
+  public void main(String[] args) {
 
     Cane lucky = new Cane("Woof!", "Croccantini");
 
@@ -15,5 +27,11 @@ public class Main {
     alex.verso();
     donald.mangia();
     flipper.verso();
+
+    System.out.println("----------");
+
+    faiVolare(alex);
+    faiNuotare(flipper);
+    faiVolare(donald);
   }
 }
