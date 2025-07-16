@@ -14,19 +14,19 @@ public abstract class AbstractAnimal {
   }
 
   // METHODS
-  private String getSound() {
+  public String getSound() {
     return this.sound;
   }
 
-  private void setSound(String sound) {
+  protected void setSound(String sound) {
     this.sound = sound;
   }
 
-  private String getFood() {
+  public String getFood() {
     return this.food;
   }
 
-  private void setFood(String food) {
+  protected void setFood(String food) {
     this.food = food;
   }
 
